@@ -1,5 +1,5 @@
-# This Repo is depreciated
-**This repo is no longer being maintained.  Please use build "[SuperCell](https://github.com/joellongie/SuperCell)".**
+# Gulp Front End Starter Template
+<!-- **This repo is no longer being maintained.  Please use build "[SuperCell](https://github.com/joellongie/SuperCell)".**
 
 # JL Gulp Starter 0.2
 
@@ -14,8 +14,8 @@ jlGulp starter is my former front-end framework using Gulp, Node, Sass, Susy, Br
 
 After cloning the project to your computer run the following command in your terminal to install all required node and bower packages.
 
-	1.  sudo npm install && bower install	
-		
+	1.  sudo npm install && bower install
+
 
 ## Start
 
@@ -39,4 +39,4 @@ To fire up a server and test the final build:
 Javascript concatenation is done in the config object in the guilpfile.  This controls the order as well as files to be be concatenated.  I went with a simple system in anticipation of ES6 built-in modules.  The config object also controls which files are EXCLUDED from the final build.
 
 ## .bowerrc
-Controls the location where bower packages will be installed.
+Controls the location where bower packages will be installed. -->
