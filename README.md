@@ -1,4 +1,4 @@
-# Gulp Front End Starter Template
+# Gulp Front End Build System
 <!-- **This repo is no longer being maintained.  Please use build "[SuperCell](https://github.com/joellongie/SuperCell)".**
 
 # JL Gulp Starter 0.2

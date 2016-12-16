@@ -37,6 +37,7 @@ var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	uglify = require('gulp-uglify'),
 	rename = require('gulp-rename'),
+	imagemin = require('gulp-imagemin'),
 	del = require('del');
 
 
@@ -67,6 +68,16 @@ gulp.task('scripts', function() {
     .pipe(reload({stream:true}));
 });
 
+
+/* ==========================================================================
+// Imgage compress Tasks
+	========================================================================== */
+gulp.task('compress-images', function(){
+	return gulp.src('app/pre-images/**/*.+(png|jpg|gif|svg)')
+		.pipe(imagemin({ optimizationLevel: 7 }))
+		.pipe(gulp.dest('./app/images'));
+
+});
 
 /* ==========================================================================
 // Styles Tasks
@@ -152,8 +163,9 @@ gulp.task('build', ['build:copy', 'build:remove']);
 gulp.task ('watch', function(){
 	gulp.watch('app/scss/**/*.scss', ['styles']);
 	gulp.watch('app/js/**/*.js', ['scripts']);
-  	gulp.watch('app/**/*.html', ['html']);
+  gulp.watch('app/**/*.html', ['html']);
+	gulp.watch('app/pre-images/**/*.+(png|jpg|gif|svg)', ['compress-images']);
 });
 
 
-gulp.task('default', ['scripts', 'styles', 'html', 'browser-sync', 'watch']);
+gulp.task('default', ['scripts', 'styles', 'html', 'browser-sync','compress-images','watch']);
